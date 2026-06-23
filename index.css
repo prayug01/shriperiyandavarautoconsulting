@@ -108,6 +108,15 @@ nav.scrolled {
   font-size: 1.5rem;
   color: var(--primary-color);
   animation: slowGlow 3s infinite;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  border-radius: 5px;
 }
 
 .nav-links {

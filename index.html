@@ -23,11 +23,24 @@
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">SHRIPERIYANDAVAR</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#vehicles">Vehicles</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="btn-primary dropdown-toggle" style="padding: 10px 20px;">Category <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#yodha">TATA (Yodha)</a></li>
+                        <li><a href="https://wa.me/c/918098364254" target="_blank">ASHOKLEYLAND</a></li>
+                        <li><a href="#maximo">MAHINDRA (Maxximo)</a></li>
+                        <li><a href="#carrier">MARUTI SUZUKI (Super Carry)</a></li>
+                        <li><a href="https://wa.me/c/918098364254" target="_blank">Others</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact" class="btn-primary" style="padding: 10px 20px;">Contact Us</a></li>
             </ul>
         </div>
@@ -86,6 +99,41 @@
             </div>
         </div>
     </section>
+    
+    <!-- Tata Yodha Section -->
+    <section class="section" id="yodha" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Featured: Tata Yodha</h2>
+                <div class="underline"></div>
+                <p style="margin-top: 15px; color: var(--text-muted);">The Warrior of the Road - Heavy Duty Performance</p>
+            </div>
+            
+            <div class="maxximo-gallery">
+                <div class="main-image reveal">
+                    <img id="main-yodha" src="assets/yodha_2.jpg" alt="Tata Yodha">
+                </div>
+                <div class="thumbnails reveal">
+                    <img src="assets/yodha_2.jpg" alt="Front" class="active" onclick="changeYodhaImage(this)">
+                    <img src="assets/yodha_5.jpg" alt="Side angle" onclick="changeYodhaImage(this)">
+                    <img src="assets/yodha_3.jpg" alt="Rear view" onclick="changeYodhaImage(this)">
+                    <img src="assets/yodha_4.jpg" alt="Interior" onclick="changeYodhaImage(this)">
+                    <img src="assets/yodha_1.jpg" alt="Side view" onclick="changeYodhaImage(this)">
+                </div>
+            </div>
+
+            <div class="maximo-details reveal">
+                <div class="specs">
+                    <div class="spec-item"><i class="fas fa-weight-hanging"></i> <span>High Payload Capacity</span></div>
+                    <div class="spec-item"><i class="fas fa-mountain"></i> <span>Best-in-class Gradeability</span></div>
+                    <div class="spec-item"><i class="fas fa-couch"></i> <span>Comfortable Interiors</span></div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="https://wa.me/918098364254?text=I'm interested in the Tata Yodha" target="_blank" class="btn-primary">Enquire for Tata Yodha</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section class="section services-section" id="services">
@@ -110,6 +158,76 @@
                     <i class="fas fa-truck-fast"></i>
                     <h3>Quick Processing</h3>
                     <p>Fast documentation and delivery support to get you on the road as quickly as possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mahindra Maxximo Section -->
+    <section class="section" id="maximo" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Featured: Mahindra Maxximo</h2>
+                <div class="underline"></div>
+                <p style="margin-top: 15px; color: var(--text-muted);">Commercial excellence - Multi-purpose Courier Van</p>
+            </div>
+            
+            <div class="maxximo-gallery">
+                <div class="main-image reveal">
+                    <img id="main-maxximo" src="assets/maxximo_1.jpg" alt="Mahindra Maxximo">
+                </div>
+                <div class="thumbnails reveal">
+                    <img src="assets/maxximo_1.jpg" alt="Front" class="active" onclick="changeMaximoImage(this)">
+                    <img src="assets/maxximo_2.jpg" alt="Interior" onclick="changeMaximoImage(this)">
+                    <img src="assets/maxximo_3.jpg" alt="Side Rear" onclick="changeMaximoImage(this)">
+                    <img src="assets/maxximo_4.jpg" alt="Front Corner" onclick="changeMaximoImage(this)">
+                    <img src="assets/maxximo_5.jpg" alt="Side View" onclick="changeMaximoImage(this)">
+                </div>
+            </div>
+
+            <div class="maximo-details reveal">
+                <div class="specs">
+                    <div class="spec-item"><i class="fas fa-truck-ramp-box"></i> <span>Closed Body Courier Van</span></div>
+                    <div class="spec-item"><i class="fas fa-gauge-high"></i> <span>Pristine Condition</span></div>
+                    <div class="spec-item"><i class="fas fa-file-contract"></i> <span>Clear Documents</span></div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="https://wa.me/918098364254?text=I'm interested in the Mahindra Maxximo" target="_blank" class="btn-primary">Get Price Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maruti Suzuki Super Carry Section -->
+    <section class="section" id="carrier" style="border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Featured: Maruti Suzuki Super Carry</h2>
+                <div class="underline"></div>
+                <p style="margin-top: 15px; color: var(--text-muted);">The Ultimate Cargo Partner - Efficient & Reliable</p>
+            </div>
+            
+            <div class="maxximo-gallery">
+                <div class="main-image reveal">
+                    <img id="main-carrier" src="assets/carrier_3.jpg" alt="Maruti Suzuki Super Carry">
+                </div>
+                <div class="thumbnails reveal">
+                    <img src="assets/carrier_3.jpg" alt="Front Corner" class="active" onclick="changeCarrierImage(this)">
+                    <img src="assets/carrier_5.jpg" alt="Front Side" onclick="changeCarrierImage(this)">
+                    <img src="assets/carrier_1.jpg" alt="Rear" onclick="changeCarrierImage(this)">
+                    <img src="assets/carrier_2.jpg" alt="Cargo Area" onclick="changeCarrierImage(this)">
+                    <img src="assets/carrier_4.jpg" alt="Interior" onclick="changeCarrierImage(this)">
+                </div>
+            </div>
+
+            <div class="maximo-details reveal">
+                <div class="specs">
+                    <div class="spec-item"><i class="fas fa-box-open"></i> <span>Large Cargo Box</span></div>
+                    <div class="spec-item"><i class="fas fa-bolt"></i> <span>Robust Build</span></div>
+                    <div class="spec-item"><i class="fas fa-shield-check"></i> <span>Well Maintained</span></div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="https://wa.me/918098364254?text=I'm interested in the Maruti Suzuki Super Carry" target="_blank" class="btn-primary">Check Availability</a>
                 </div>
             </div>
         </div>

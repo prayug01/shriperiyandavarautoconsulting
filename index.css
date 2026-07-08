@@ -114,9 +114,10 @@ nav.scrolled {
 }
 
 .logo-img {
-  height: 45px;
+  height: 55px;
   width: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .nav-links {

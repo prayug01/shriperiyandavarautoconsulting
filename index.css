@@ -579,13 +579,11 @@ nav.scrolled {
 
 .thumbnails {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  width: 260px; /* 3 images (80px) + 2 gaps (10px) = 260px */
   padding: 5px 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  margin: 10px auto 0;
 }
 
 .thumbnails::-webkit-scrollbar {
@@ -910,22 +908,59 @@ footer {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    font-size: 1.6rem;
+    color: var(--text-main);
   }
 
   .nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin-right: auto;
-  margin-left: 40px;
-}
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    max-width: 320px;
+    height: calc(100vh - 80px);
+    background: #ffffff;
+    border-left: 1px solid var(--glass-border);
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.05);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+    margin: 0;
+    transition: var(--transition);
+    z-index: 1000;
+  }
 
   .nav-links.active {
     right: 0;
   }
 
   .nav-links li {
-    margin: 15px 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-links .nav-location-btn {
+    display: inline-flex !important;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  .nav-links .btn-primary:not(.dropdown-toggle) {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .dropdown-menu {
@@ -933,12 +968,15 @@ footer {
     transform: none;
     opacity: 1;
     visibility: visible;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.02);
     border: none;
     box-shadow: none;
     display: none;
-    text-align: center;
-    margin-top: 0;
+    text-align: left;
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
   }
 
   .dropdown-menu::before {
@@ -950,12 +988,12 @@ footer {
   }
 
   .dropdown-menu li a {
-    padding: 10px;
-    justify-content: center;
+    padding: 8px 0;
+    font-size: 0.95rem;
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   
   .grid {

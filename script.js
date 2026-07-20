@@ -134,3 +134,18 @@ window.addEventListener('scroll', () => {
         heroBg.style.transform = `scale(${1.1 + scrollValue * 0.0001}) translateY(${scrollValue * 0.1}px)`;
     }
 });
+
+// Generic Gallery Switcher (Dynamic)
+function changeGalleryImage(thumbnail, mainImgId) {
+    const mainImg = document.getElementById(mainImgId);
+    const thumbnails = thumbnail.parentElement.querySelectorAll('img');
+    
+    mainImg.style.opacity = '0';
+    setTimeout(() => {
+        mainImg.src = thumbnail.src;
+        mainImg.style.opacity = '1';
+    }, 200);
+    
+    thumbnails.forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+}

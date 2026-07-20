@@ -46,6 +46,7 @@
                         <li><a href="https://wa.me/c/918098364254" target="_blank">Others</a></li>
                     </ul>
                 </li>
+                <li><a href="https://maps.app.goo.gl/mfA8HtyTfu3S96kZ9?g_st=awb" target="_blank" class="nav-location-btn"><i class="fas fa-map-marker-alt"></i> Location</a></li>
                 <li><a href="#contact" class="btn-primary" style="padding: 10px 20px;">Contact Us</a></li>
             </ul>
         </div>
@@ -53,7 +54,11 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('assets/yodha_2.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/maxximo_1.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/carrier_3.jpg');"></div>
+        </div>
         <div class="container hero-content">
             <h1>ஸ்ரீ பெரியாண்டவர் ஆட்டோ கன்சல்டிங்</h1>
             <div class="hero-sub">
@@ -68,48 +73,6 @@
         </div>
     </header>
 
-    <!-- Categories Section -->
-    <section class="section" id="vehicles">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Our Fleet</h2>
-                <div class="underline"></div>
-            </div>
-            
-            <div class="grid">
-                <!-- Cars -->
-                <div class="card reveal">
-                    <div class="card-img" style="background-image: url('assets/hero.png');"></div>
-                    <div class="card-content">
-                        <h3>Luxury & Economy Cars</h3>
-                        <p>From sleek city sedans to spacious family SUVs. We offer the best deals on both new and pre-owned vehicles.</p>
-                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">View Collection <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Trucks -->
-                <div class="card reveal">
-                    <div class="card-img" style="background-image: url('assets/truck.png');"></div>
-                    <div class="card-content">
-                        <h3>Commercial Trucks</h3>
-                        <p>Heavy-duty trucks and commercial vehicles designed for maximum durability and business performance.</p>
-                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">View Collection <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Consulting -->
-                <div class="card reveal">
-                    <div class="card-img" style="background-image: url('assets/showroom.png');"></div>
-                    <div class="card-content">
-                        <h3>Expert Consulting</h3>
-                        <p>Not sure what to buy? Our experts help you find the perfect vehicle that fits your budget and requirements.</p>
-                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">Talk to Expert <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Tata Yodha Section -->
     <section class="section" id="yodha" style="background: rgba(0,0,0,0.01);">
         <div class="container">
@@ -145,34 +108,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section services-section" id="services">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Why Choose Us?</h2>
-                <div class="underline"></div>
-            </div>
-            
-            <div class="grid">
-                <div class="service-item reveal">
-                    <i class="fas fa-shield-halved"></i>
-                    <h3>Guaranteed Quality</h3>
-                    <p>Every vehicle in our catalogue undergoes a rigorous multi-point inspection process.</p>
-                </div>
-                <div class="service-item reveal">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Best Pricing</h3>
-                    <p>Transparent pricing with no hidden costs. We ensure you get the best value for your investment.</p>
-                </div>
-                <div class="service-item reveal">
-                    <i class="fas fa-truck-fast"></i>
-                    <h3>Quick Processing</h3>
-                    <p>Fast documentation and delivery support to get you on the road as quickly as possible.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Mahindra Maxximo Section -->
     <section class="section" id="maximo" style="background: rgba(0,0,0,0.02);">
         <div class="container">
@@ -243,14 +178,33 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <div class="container reveal">
-        <div class="cta-banner">
-            <h2>Ready to find your next ride?</h2>
-            <p style="margin: 20px 0; color: var(--text-muted);">Browse our live catalogue on WhatsApp for the latest inventory and pricing.</p>
-            <a href="https://wa.me/c/918098364254" target="_blank" class="btn-primary">Open WhatsApp Catalogue</a>
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Why Choose Us?</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="grid">
+                <div class="service-item reveal">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Guaranteed Quality</h3>
+                    <p>Every vehicle in our catalogue undergoes a rigorous multi-point inspection process.</p>
+                </div>
+                <div class="service-item reveal">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Best Pricing</h3>
+                    <p>Transparent pricing with no hidden costs. We ensure you get the best value for your investment.</p>
+                </div>
+                <div class="service-item reveal">
+                    <i class="fas fa-truck-fast"></i>
+                    <h3>Quick Processing</h3>
+                    <p>Fast documentation and delivery support to get you on the road as quickly as possible.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- About Section -->
     <section class="section" id="about">
@@ -271,6 +225,57 @@
             </div>
         </div>
     </section>
+
+    <!-- Categories / Fleet Section -->
+    <section class="section" id="vehicles">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Fleet</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="grid">
+                <!-- Cars -->
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('assets/hero.png');"></div>
+                    <div class="card-content">
+                        <h3>Luxury & Economy Cars</h3>
+                        <p>From sleek city sedans to spacious family SUVs. We offer the best deals on both new and pre-owned vehicles.</p>
+                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">View Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Trucks -->
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('assets/truck.png');"></div>
+                    <div class="card-content">
+                        <h3>Commercial Trucks</h3>
+                        <p>Heavy-duty trucks and commercial vehicles designed for maximum durability and business performance.</p>
+                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">View Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Consulting -->
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('assets/showroom.png');"></div>
+                    <div class="card-content">
+                        <h3>Expert Consulting</h3>
+                        <p>Not sure what to buy? Our experts help you find the perfect vehicle that fits your budget and requirements.</p>
+                        <a href="https://wa.me/c/918098364254" target="_blank" style="color: var(--primary-color);">Talk to Expert <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="container reveal">
+        <div class="cta-banner">
+            <h2>Ready to find your next ride?</h2>
+            <p style="margin: 20px 0; color: var(--text-muted);">Browse our live catalogue on WhatsApp for the latest inventory and pricing.</p>
+            <a href="https://wa.me/c/918098364254" target="_blank" class="btn-primary">Open WhatsApp Catalogue</a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="contact">

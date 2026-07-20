@@ -126,14 +126,16 @@ function changeYodhaImage(thumbnail) {
     thumbnail.classList.add('active');
 }
 
-// Parallax effect for Hero
-window.addEventListener('scroll', () => {
-    const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
-        let scrollValue = window.scrollY;
-        heroBg.style.transform = `scale(${1.1 + scrollValue * 0.0001}) translateY(${scrollValue * 0.1}px)`;
-    }
-});
+// Hero Slideshow Timer
+const slides = document.querySelectorAll('.hero-slideshow .slide');
+if (slides.length > 0) {
+    let currentSlide = 0;
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 4500);
+}
 
 // Generic Gallery Switcher (Dynamic)
 function changeGalleryImage(thumbnail, mainImgId) {

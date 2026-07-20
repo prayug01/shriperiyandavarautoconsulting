@@ -160,6 +160,28 @@ nav.scrolled {
   margin-left: 40px;
 }
 
+.nav-location-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(46, 189, 89, 0.08) !important;
+  border: 1.5px solid #2ebd59 !important;
+  color: #2ebd59 !important;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.nav-location-btn:hover {
+  background: #2ebd59 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(46, 189, 89, 0.3) !important;
+  transform: scale(1.02);
+}
+
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
@@ -276,35 +298,59 @@ nav.scrolled {
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
-.hero-bg {
+.hero-slideshow {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('assets/hero.png');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  transform: scale(1.1);
-  transition: transform 10s ease-out;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.hero:hover .hero-bg {
-  transform: scale(1);
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.88); /* Clean whitish overlay */
+  z-index: 2;
 }
 
 .hero-content {
   max-width: 700px;
   animation: fadeInUp 1s ease-out forwards;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-content h1 {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 20px;
+  color: #2ebd59; /* Custom Green for title */
+  text-shadow: 0 0 20px rgba(46, 189, 89, 0.1);
 }
 
 .hero-content p {
@@ -413,7 +459,9 @@ nav.scrolled {
 
 /* Services */
 .services-section {
-  background: #121212;
+  background: #f9fafb;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .service-item {
